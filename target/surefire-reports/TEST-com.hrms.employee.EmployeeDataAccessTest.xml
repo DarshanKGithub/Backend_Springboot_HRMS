@@ -1,0 +1,1434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.hrms.employee.EmployeeDataAccessTest" time="4.7" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/darshan-kshetri/Desktop/Projects-2026/HRMS/SpringBackend/target/test-classes:/home/darshan-kshetri/Desktop/Projects-2026/HRMS/SpringBackend/target/classes:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.3.4/spring-boot-starter-web-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter/3.3.4/spring-boot-starter-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot/3.3.4/spring-boot-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.3.4/spring-boot-autoconfigure-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.3.4/spring-boot-starter-logging-3.3.4.jar:/home/darshan-kshetri/.m2/repository/ch/qos/logback/logback-classic/1.5.8/logback-classic-1.5.8.jar:/home/darshan-kshetri/.m2/repository/ch/qos/logback/logback-core/1.5.8/logback-core-1.5.8.jar:/home/darshan-kshetri/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.jar:/home/darshan-kshetri/.m2/repository/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar:/home/darshan-kshetri/.m2/repository/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar:/home/darshan-kshetri/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/darshan-kshetri/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.3.4/spring-boot-starter-json-3.3.4.jar:/home/darshan-kshetri/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2.jar:/home/darshan-kshetri/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2.jar:/home/darshan-kshetri/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.3.4/spring-boot-starter-tomcat-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.30/tomcat-embed-core-10.1.30.jar:/home/darshan-kshetri/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.30/tomcat-embed-websocket-10.1.30.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-web/6.1.13/spring-web-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-beans/6.1.13/spring-beans-6.1.13.jar:/home/darshan-kshetri/.m2/repository/io/micrometer/micrometer-observation/1.13.4/micrometer-observation-1.13.4.jar:/home/darshan-kshetri/.m2/repository/io/micrometer/micrometer-commons/1.13.4/micrometer-commons-1.13.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-webmvc/6.1.13/spring-webmvc-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-context/6.1.13/spring-context-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-expression/6.1.13/spring-expression-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.3.4/spring-boot-starter-data-jpa-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.3.4/spring-boot-starter-aop-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.3.4/spring-boot-starter-jdbc-3.3.4.jar:/home/darshan-kshetri/.m2/repository/com/zaxxer/HikariCP/5.1.0/HikariCP-5.1.0.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-jdbc/6.1.13/spring-jdbc-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/hibernate/orm/hibernate-core/6.5.3.Final/hibernate-core-6.5.3.Final.jar:/home/darshan-kshetri/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/home/darshan-kshetri/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/darshan-kshetri/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/home/darshan-kshetri/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/home/darshan-kshetri/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/home/darshan-kshetri/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/home/darshan-kshetri/.m2/repository/net/bytebuddy/byte-buddy/1.14.19/byte-buddy-1.14.19.jar:/home/darshan-kshetri/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/home/darshan-kshetri/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/home/darshan-kshetri/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/home/darshan-kshetri/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/home/darshan-kshetri/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/darshan-kshetri/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/darshan-kshetri/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/home/darshan-kshetri/.m2/repository/org/springframework/data/spring-data-jpa/3.3.4/spring-data-jpa-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/data/spring-data-commons/3.3.4/spring-data-commons-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-orm/6.1.13/spring-orm-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-tx/6.1.13/spring-tx-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-aspects/6.1.13/spring-aspects-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.3.4/spring-boot-starter-security-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-aop/6.1.13/spring-aop-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/springframework/security/spring-security-config/6.3.3/spring-security-config-6.3.3.jar:/home/darshan-kshetri/.m2/repository/org/springframework/security/spring-security-core/6.3.3/spring-security-core-6.3.3.jar:/home/darshan-kshetri/.m2/repository/org/springframework/security/spring-security-crypto/6.3.3/spring-security-crypto-6.3.3.jar:/home/darshan-kshetri/.m2/repository/org/springframework/security/spring-security-web/6.3.3/spring-security-web-6.3.3.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.3.4/spring-boot-starter-validation-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.30/tomcat-embed-el-10.1.30.jar:/home/darshan-kshetri/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/home/darshan-kshetri/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/darshan-kshetri/.m2/repository/org/postgresql/postgresql/42.7.4/postgresql-42.7.4.jar:/home/darshan-kshetri/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/home/darshan-kshetri/.m2/repository/io/jsonwebtoken/jjwt-api/0.12.6/jjwt-api-0.12.6.jar:/home/darshan-kshetri/.m2/repository/io/jsonwebtoken/jjwt-impl/0.12.6/jjwt-impl-0.12.6.jar:/home/darshan-kshetri/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.12.6/jjwt-jackson-0.12.6.jar:/home/darshan-kshetri/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar:/home/darshan-kshetri/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar:/home/darshan-kshetri/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar:/home/darshan-kshetri/.m2/repository/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar:/home/darshan-kshetri/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.6.0/springdoc-openapi-starter-webmvc-ui-2.6.0.jar:/home/darshan-kshetri/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.6.0/springdoc-openapi-starter-webmvc-api-2.6.0.jar:/home/darshan-kshetri/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.6.0/springdoc-openapi-starter-common-2.6.0.jar:/home/darshan-kshetri/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.22/swagger-core-jakarta-2.2.22.jar:/home/darshan-kshetri/.m2/repository/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar:/home/darshan-kshetri/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.22/swagger-annotations-jakarta-2.2.22.jar:/home/darshan-kshetri/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.22/swagger-models-jakarta-2.2.22.jar:/home/darshan-kshetri/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.17.2/jackson-dataformat-yaml-2.17.2.jar:/home/darshan-kshetri/.m2/repository/org/webjars/swagger-ui/5.17.14/swagger-ui-5.17.14.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.3.4/spring-boot-starter-test-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-test/3.3.4/spring-boot-test-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.3.4/spring-boot-test-autoconfigure-3.3.4.jar:/home/darshan-kshetri/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/home/darshan-kshetri/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/home/darshan-kshetri/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/home/darshan-kshetri/.m2/repository/net/minidev/json-smart/2.5.1/json-smart-2.5.1.jar:/home/darshan-kshetri/.m2/repository/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.jar:/home/darshan-kshetri/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/home/darshan-kshetri/.m2/repository/org/assertj/assertj-core/3.25.3/assertj-core-3.25.3.jar:/home/darshan-kshetri/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/home/darshan-kshetri/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/darshan-kshetri/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.3/junit-jupiter-5.10.3.jar:/home/darshan-kshetri/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.3/junit-jupiter-api-5.10.3.jar:/home/darshan-kshetri/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/darshan-kshetri/.m2/repository/org/junit/platform/junit-platform-commons/1.10.3/junit-platform-commons-1.10.3.jar:/home/darshan-kshetri/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/darshan-kshetri/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.3/junit-jupiter-params-5.10.3.jar:/home/darshan-kshetri/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.3/junit-jupiter-engine-5.10.3.jar:/home/darshan-kshetri/.m2/repository/org/junit/platform/junit-platform-engine/1.10.3/junit-platform-engine-1.10.3.jar:/home/darshan-kshetri/.m2/repository/org/mockito/mockito-core/5.11.0/mockito-core-5.11.0.jar:/home/darshan-kshetri/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar:/home/darshan-kshetri/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/darshan-kshetri/.m2/repository/org/mockito/mockito-junit-jupiter/5.11.0/mockito-junit-jupiter-5.11.0.jar:/home/darshan-kshetri/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/home/darshan-kshetri/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-core/6.1.13/spring-core-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-jcl/6.1.13/spring-jcl-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-test/6.1.13/spring-test-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/home/darshan-kshetri/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-21-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/darshan-kshetri/Desktop/Projects-2026/HRMS/SpringBackend/target/surefire/surefirebooter-20260906202705917_3.jar /home/darshan-kshetri/Desktop/Projects-2026/HRMS/SpringBackend/target/surefire 2026-09-06T20-27-05_865-jvmRun1 surefire-20260906202705917_1tmp surefire_0-20260906202705917_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/darshan-kshetri/Desktop/Projects-2026/HRMS/SpringBackend/target/test-classes:/home/darshan-kshetri/Desktop/Projects-2026/HRMS/SpringBackend/target/classes:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.3.4/spring-boot-starter-web-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter/3.3.4/spring-boot-starter-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot/3.3.4/spring-boot-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.3.4/spring-boot-autoconfigure-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.3.4/spring-boot-starter-logging-3.3.4.jar:/home/darshan-kshetri/.m2/repository/ch/qos/logback/logback-classic/1.5.8/logback-classic-1.5.8.jar:/home/darshan-kshetri/.m2/repository/ch/qos/logback/logback-core/1.5.8/logback-core-1.5.8.jar:/home/darshan-kshetri/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.jar:/home/darshan-kshetri/.m2/repository/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar:/home/darshan-kshetri/.m2/repository/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar:/home/darshan-kshetri/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/darshan-kshetri/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.3.4/spring-boot-starter-json-3.3.4.jar:/home/darshan-kshetri/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2.jar:/home/darshan-kshetri/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2.jar:/home/darshan-kshetri/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.3.4/spring-boot-starter-tomcat-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.30/tomcat-embed-core-10.1.30.jar:/home/darshan-kshetri/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.30/tomcat-embed-websocket-10.1.30.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-web/6.1.13/spring-web-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-beans/6.1.13/spring-beans-6.1.13.jar:/home/darshan-kshetri/.m2/repository/io/micrometer/micrometer-observation/1.13.4/micrometer-observation-1.13.4.jar:/home/darshan-kshetri/.m2/repository/io/micrometer/micrometer-commons/1.13.4/micrometer-commons-1.13.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-webmvc/6.1.13/spring-webmvc-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-context/6.1.13/spring-context-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-expression/6.1.13/spring-expression-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.3.4/spring-boot-starter-data-jpa-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.3.4/spring-boot-starter-aop-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.3.4/spring-boot-starter-jdbc-3.3.4.jar:/home/darshan-kshetri/.m2/repository/com/zaxxer/HikariCP/5.1.0/HikariCP-5.1.0.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-jdbc/6.1.13/spring-jdbc-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/hibernate/orm/hibernate-core/6.5.3.Final/hibernate-core-6.5.3.Final.jar:/home/darshan-kshetri/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/home/darshan-kshetri/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/darshan-kshetri/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/home/darshan-kshetri/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/home/darshan-kshetri/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/home/darshan-kshetri/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/home/darshan-kshetri/.m2/repository/net/bytebuddy/byte-buddy/1.14.19/byte-buddy-1.14.19.jar:/home/darshan-kshetri/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/home/darshan-kshetri/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/home/darshan-kshetri/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/home/darshan-kshetri/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/home/darshan-kshetri/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/darshan-kshetri/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/darshan-kshetri/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/home/darshan-kshetri/.m2/repository/org/springframework/data/spring-data-jpa/3.3.4/spring-data-jpa-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/data/spring-data-commons/3.3.4/spring-data-commons-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-orm/6.1.13/spring-orm-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-tx/6.1.13/spring-tx-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-aspects/6.1.13/spring-aspects-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.3.4/spring-boot-starter-security-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-aop/6.1.13/spring-aop-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/springframework/security/spring-security-config/6.3.3/spring-security-config-6.3.3.jar:/home/darshan-kshetri/.m2/repository/org/springframework/security/spring-security-core/6.3.3/spring-security-core-6.3.3.jar:/home/darshan-kshetri/.m2/repository/org/springframework/security/spring-security-crypto/6.3.3/spring-security-crypto-6.3.3.jar:/home/darshan-kshetri/.m2/repository/org/springframework/security/spring-security-web/6.3.3/spring-security-web-6.3.3.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.3.4/spring-boot-starter-validation-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.30/tomcat-embed-el-10.1.30.jar:/home/darshan-kshetri/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/home/darshan-kshetri/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/darshan-kshetri/.m2/repository/org/postgresql/postgresql/42.7.4/postgresql-42.7.4.jar:/home/darshan-kshetri/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/home/darshan-kshetri/.m2/repository/io/jsonwebtoken/jjwt-api/0.12.6/jjwt-api-0.12.6.jar:/home/darshan-kshetri/.m2/repository/io/jsonwebtoken/jjwt-impl/0.12.6/jjwt-impl-0.12.6.jar:/home/darshan-kshetri/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.12.6/jjwt-jackson-0.12.6.jar:/home/darshan-kshetri/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar:/home/darshan-kshetri/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar:/home/darshan-kshetri/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar:/home/darshan-kshetri/.m2/repository/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar:/home/darshan-kshetri/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.6.0/springdoc-openapi-starter-webmvc-ui-2.6.0.jar:/home/darshan-kshetri/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.6.0/springdoc-openapi-starter-webmvc-api-2.6.0.jar:/home/darshan-kshetri/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.6.0/springdoc-openapi-starter-common-2.6.0.jar:/home/darshan-kshetri/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.22/swagger-core-jakarta-2.2.22.jar:/home/darshan-kshetri/.m2/repository/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar:/home/darshan-kshetri/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.22/swagger-annotations-jakarta-2.2.22.jar:/home/darshan-kshetri/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.22/swagger-models-jakarta-2.2.22.jar:/home/darshan-kshetri/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.17.2/jackson-dataformat-yaml-2.17.2.jar:/home/darshan-kshetri/.m2/repository/org/webjars/swagger-ui/5.17.14/swagger-ui-5.17.14.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.3.4/spring-boot-starter-test-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-test/3.3.4/spring-boot-test-3.3.4.jar:/home/darshan-kshetri/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.3.4/spring-boot-test-autoconfigure-3.3.4.jar:/home/darshan-kshetri/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/home/darshan-kshetri/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/home/darshan-kshetri/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/home/darshan-kshetri/.m2/repository/net/minidev/json-smart/2.5.1/json-smart-2.5.1.jar:/home/darshan-kshetri/.m2/repository/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.jar:/home/darshan-kshetri/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/home/darshan-kshetri/.m2/repository/org/assertj/assertj-core/3.25.3/assertj-core-3.25.3.jar:/home/darshan-kshetri/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/home/darshan-kshetri/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/darshan-kshetri/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.3/junit-jupiter-5.10.3.jar:/home/darshan-kshetri/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.3/junit-jupiter-api-5.10.3.jar:/home/darshan-kshetri/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/darshan-kshetri/.m2/repository/org/junit/platform/junit-platform-commons/1.10.3/junit-platform-commons-1.10.3.jar:/home/darshan-kshetri/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/darshan-kshetri/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.3/junit-jupiter-params-5.10.3.jar:/home/darshan-kshetri/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.3/junit-jupiter-engine-5.10.3.jar:/home/darshan-kshetri/.m2/repository/org/junit/platform/junit-platform-engine/1.10.3/junit-platform-engine-1.10.3.jar:/home/darshan-kshetri/.m2/repository/org/mockito/mockito-core/5.11.0/mockito-core-5.11.0.jar:/home/darshan-kshetri/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar:/home/darshan-kshetri/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/darshan-kshetri/.m2/repository/org/mockito/mockito-junit-jupiter/5.11.0/mockito-junit-jupiter-5.11.0.jar:/home/darshan-kshetri/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/home/darshan-kshetri/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-core/6.1.13/spring-core-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-jcl/6.1.13/spring-jcl-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/springframework/spring-test/6.1.13/spring-test-6.1.13.jar:/home/darshan-kshetri/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/home/darshan-kshetri/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/darshan-kshetri"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-07-21"/>
+    <property name="java.home" value="/usr/lib/jvm/java-21-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/darshan-kshetri/Desktop/Projects-2026/HRMS/SpringBackend"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="/home/darshan-kshetri/Desktop/Projects-2026/HRMS/SpringBackend/target/surefire/surefirebooter-20260906202705917_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.12+8-1-24.04-Ubuntu"/>
+    <property name="user.name" value="darshan-kshetri"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="7.0.0-31-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/darshan-kshetri/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-21"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="21.0.12"/>
+    <property name="user.dir" value="/home/darshan-kshetri/Desktop/Projects-2026/HRMS/SpringBackend"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="198911"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.version" value="21.0.12+8-1-24.04-Ubuntu"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[hrms-spring-backend] "/>
+  </properties>
+  <testcase name="shouldSaveAndLoadEmployee" classname="com.hrms.employee.EmployeeDataAccessTest" time="0.438">
+    <system-out><![CDATA[20:27:06.678 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.hrms.employee.EmployeeDataAccessTest]: EmployeeDataAccessTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:27:06.811 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.hrms.HrmsSpringBackendApplication for test class com.hrms.employee.EmployeeDataAccessTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-09-06T20:27:07.332+05:30  INFO 198911 --- [hrms-spring-backend] [           main] c.hrms.employee.EmployeeDataAccessTest   : Starting EmployeeDataAccessTest using Java 21.0.12 with PID 198911 (started by darshan-kshetri in /home/darshan-kshetri/Desktop/Projects-2026/HRMS/SpringBackend)
+2026-09-06T20:27:07.333+05:30 DEBUG 198911 --- [hrms-spring-backend] [           main] c.hrms.employee.EmployeeDataAccessTest   : Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-09-06T20:27:07.335+05:30  INFO 198911 --- [hrms-spring-backend] [           main] c.hrms.employee.EmployeeDataAccessTest   : No active profile set, falling back to 1 default profile: "default"
+2026-09-06T20:27:07.736+05:30  INFO 198911 --- [hrms-spring-backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-06T20:27:07.865+05:30  INFO 198911 --- [hrms-spring-backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 70 JPA repository interfaces.
+2026-09-06T20:27:07.963+05:30  INFO 198911 --- [hrms-spring-backend] [           main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2026-09-06T20:27:08.117+05:30  INFO 198911 --- [hrms-spring-backend] [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:fc76c6f9-3e10-4e72-b098-05403bad15bb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2026-09-06T20:27:08.329+05:30  INFO 198911 --- [hrms-spring-backend] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-06T20:27:08.359+05:30  INFO 198911 --- [hrms-spring-backend] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-09-06T20:27:08.379+05:30  INFO 198911 --- [hrms-spring-backend] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-06T20:27:08.555+05:30  INFO 198911 --- [hrms-spring-backend] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-06T20:27:08.587+05:30  WARN 198911 --- [hrms-spring-backend] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-06T20:27:09.869+05:30  INFO 198911 --- [hrms-spring-backend] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists announcements cascade 
+Hibernate: 
+    drop table if exists asset_inventory cascade 
+Hibernate: 
+    drop table if exists attendance cascade 
+Hibernate: 
+    drop table if exists attendance_breaks cascade 
+Hibernate: 
+    drop table if exists attendance_regularizations cascade 
+Hibernate: 
+    drop table if exists attendance_rules cascade 
+Hibernate: 
+    drop table if exists audit_logs cascade 
+Hibernate: 
+    drop table if exists biometric_devices cascade 
+Hibernate: 
+    drop table if exists biometric_logs cascade 
+Hibernate: 
+    drop table if exists candidates cascade 
+Hibernate: 
+    drop table if exists certifications cascade 
+Hibernate: 
+    drop table if exists comp_off_requests cascade 
+Hibernate: 
+    drop table if exists departments cascade 
+Hibernate: 
+    drop table if exists designations cascade 
+Hibernate: 
+    drop table if exists employee_documents cascade 
+Hibernate: 
+    drop table if exists employee_grievances cascade 
+Hibernate: 
+    drop table if exists employee_loans cascade 
+Hibernate: 
+    drop table if exists employee_salary_components cascade 
+Hibernate: 
+    drop table if exists employee_shift_assignments cascade 
+Hibernate: 
+    drop table if exists employee_trainings cascade 
+Hibernate: 
+    drop table if exists employees cascade 
+Hibernate: 
+    drop table if exists exit_cases cascade 
+Hibernate: 
+    drop table if exists feature_package_features cascade 
+Hibernate: 
+    drop table if exists feature_packages cascade 
+Hibernate: 
+    drop table if exists feedback cascade 
+Hibernate: 
+    drop table if exists form_templates cascade 
+Hibernate: 
+    drop table if exists gate_passes cascade 
+Hibernate: 
+    drop table if exists goals cascade 
+Hibernate: 
+    drop table if exists helpdesk_tickets cascade 
+Hibernate: 
+    drop table if exists holidays cascade 
+Hibernate: 
+    drop table if exists interviews cascade 
+Hibernate: 
+    drop table if exists job_applications cascade 
+Hibernate: 
+    drop table if exists job_postings cascade 
+Hibernate: 
+    drop table if exists kpis cascade 
+Hibernate: 
+    drop table if exists leave_balances cascade 
+Hibernate: 
+    drop table if exists leave_requests cascade 
+Hibernate: 
+    drop table if exists leave_types cascade 
+Hibernate: 
+    drop table if exists notification_preferences cascade 
+Hibernate: 
+    drop table if exists notification_templates cascade 
+Hibernate: 
+    drop table if exists notifications cascade 
+Hibernate: 
+    drop table if exists offer_letters cascade 
+Hibernate: 
+    drop table if exists onboarding_plans cascade 
+Hibernate: 
+    drop table if exists overtime_requests cascade 
+Hibernate: 
+    drop table if exists payment_webhook_events cascade 
+Hibernate: 
+    drop table if exists payslip_components cascade 
+Hibernate: 
+    drop table if exists payslips cascade 
+Hibernate: 
+    drop table if exists performance_appraisals cascade 
+Hibernate: 
+    drop table if exists plan_features cascade 
+Hibernate: 
+    drop table if exists plans cascade 
+Hibernate: 
+    drop table if exists reimbursements cascade 
+Hibernate: 
+    drop table if exists roster_entries cascade 
+Hibernate: 
+    drop table if exists rosters cascade 
+Hibernate: 
+    drop table if exists salaries cascade 
+Hibernate: 
+    drop table if exists salary_components cascade 
+Hibernate: 
+    drop table if exists salary_history cascade 
+Hibernate: 
+    drop table if exists salary_structures cascade 
+Hibernate: 
+    drop table if exists shifts cascade 
+Hibernate: 
+    drop table if exists subscriptions cascade 
+Hibernate: 
+    drop table if exists survey_answers cascade 
+Hibernate: 
+    drop table if exists survey_questions cascade 
+Hibernate: 
+    drop table if exists survey_responses cascade 
+Hibernate: 
+    drop table if exists surveys cascade 
+Hibernate: 
+    drop table if exists tenant_features cascade 
+Hibernate: 
+    drop table if exists tenants cascade 
+Hibernate: 
+    drop table if exists timesheets cascade 
+Hibernate: 
+    drop table if exists todo_items cascade 
+Hibernate: 
+    drop table if exists training_courses cascade 
+Hibernate: 
+    drop table if exists users cascade 
+Hibernate: 
+    drop table if exists workflow_instances cascade 
+Hibernate: 
+    drop table if exists workflow_templates cascade 
+Hibernate: 
+    create table announcements (
+        is_active boolean not null,
+        created_at timestamp(6) not null,
+        author_id uuid not null,
+        id uuid not null,
+        priority varchar(30) not null,
+        title varchar(200) not null,
+        content varchar(2000) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table asset_inventory (
+        assigned_on timestamp(6),
+        employee_id uuid,
+        id uuid not null,
+        status varchar(30) not null,
+        asset_tag varchar(100) not null unique,
+        category varchar(100) not null,
+        serial_number varchar(120),
+        name varchar(200) not null,
+        notes varchar(2000),
+        primary key (id)
+    )
+Hibernate: 
+    create table attendance (
+        attendance_date date not null,
+        is_half_day boolean not null,
+        is_late boolean not null,
+        is_work_from_home boolean not null,
+        late_minutes integer not null,
+        check_in_time timestamp(6),
+        check_out_time timestamp(6),
+        employee_id uuid not null,
+        id uuid not null,
+        status varchar(30) not null,
+        notes varchar(500),
+        primary key (id)
+    )
+Hibernate: 
+    create table attendance_breaks (
+        created_at timestamp(6) not null,
+        end_time timestamp(6),
+        start_time timestamp(6) not null,
+        attendance_id uuid not null,
+        id uuid not null,
+        break_type varchar(50) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table attendance_regularizations (
+        date date not null,
+        created_at timestamp(6) not null,
+        requested_check_in timestamp(6),
+        requested_check_out timestamp(6),
+        updated_at timestamp(6) not null,
+        approver_id uuid,
+        attendance_id uuid,
+        employee_id uuid not null,
+        id uuid not null,
+        status varchar(30) not null,
+        reason varchar(1000) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table attendance_rules (
+        is_active boolean not null,
+        threshold_minutes integer not null,
+        created_at timestamp(6) not null,
+        id uuid not null,
+        tenant_id uuid,
+        rule_type varchar(60) not null,
+        name varchar(120) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table audit_logs (
+        created_at timestamp(6) not null,
+        actor_id uuid,
+        id uuid not null,
+        object_id uuid,
+        action varchar(60) not null,
+        object_type varchar(60) not null,
+        data varchar(2000),
+        primary key (id)
+    )
+Hibernate: 
+    create table biometric_devices (
+        created_at timestamp(6) not null,
+        last_sync_time timestamp(6),
+        id uuid not null,
+        status varchar(30) not null,
+        ip_address varchar(50),
+        device_id varchar(100) not null unique,
+        name varchar(120) not null,
+        location varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table biometric_logs (
+        created_at timestamp(6) not null,
+        timestamp timestamp(6) not null,
+        device_id uuid not null,
+        employee_id uuid not null,
+        id uuid not null,
+        log_type varchar(20) not null,
+        status varchar(30) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table candidates (
+        created_at timestamp(6) not null,
+        id uuid not null,
+        phone varchar(20),
+        first_name varchar(100) not null,
+        last_name varchar(100) not null,
+        source varchar(100),
+        resume_url varchar(1000),
+        parsed_skills varchar(2000),
+        email varchar(255) not null unique,
+        primary key (id)
+    )
+Hibernate: 
+    create table certifications (
+        expiry_date date,
+        issue_date date not null,
+        employee_id uuid not null,
+        id uuid not null,
+        verification_id varchar(100) not null unique,
+        issuing_authority varchar(200) not null,
+        name varchar(200) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table comp_off_requests (
+        worked_date date not null,
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        approver_id uuid,
+        employee_id uuid not null,
+        id uuid not null,
+        leave_balance_id uuid,
+        status varchar(30) not null,
+        reason varchar(1000),
+        primary key (id)
+    )
+Hibernate: 
+    create table departments (
+        id uuid not null,
+        name varchar(120) not null unique,
+        primary key (id)
+    )
+Hibernate: 
+    create table designations (
+        created_at timestamp(6) not null,
+        id uuid not null,
+        tenant_id uuid,
+        name varchar(120) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table employee_documents (
+        uploaded_at timestamp(6) not null,
+        employee_id uuid not null,
+        id uuid not null,
+        uploaded_by uuid not null,
+        document_type varchar(100) not null,
+        file_path varchar(1000) not null,
+        file_name varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table employee_grievances (
+        created_at timestamp(6) not null,
+        meeting_scheduled_at timestamp(6),
+        updated_at timestamp(6) not null,
+        against_employee_id uuid,
+        employee_id uuid not null,
+        id uuid not null,
+        investigator_id uuid,
+        status varchar(30) not null,
+        subject varchar(200) not null,
+        description varchar(2000) not null,
+        investigation_notes varchar(2000),
+        primary key (id)
+    )
+Hibernate: 
+    create table employee_loans (
+        amount numeric(10,2) not null,
+        emi_amount numeric(10,2) not null,
+        interest_rate numeric(5,2) not null,
+        remaining_balance numeric(10,2) not null,
+        created_at timestamp(6) not null,
+        employee_id uuid,
+        id uuid not null,
+        status varchar(30) not null,
+        loan_type varchar(50) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table employee_salary_components (
+        amount numeric(12,2) not null,
+        is_fixed boolean not null,
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        employee_id uuid not null,
+        id uuid not null,
+        salary_component_id uuid not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table employee_shift_assignments (
+        end_date date,
+        is_active boolean not null,
+        start_date date not null,
+        created_at timestamp(6) not null,
+        employee_id uuid not null,
+        id uuid not null,
+        shift_id uuid not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table employee_trainings (
+        completion_date date,
+        course_id uuid not null,
+        employee_id uuid not null,
+        id uuid not null,
+        status varchar(30) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table employees (
+        is_active boolean not null,
+        department_id uuid,
+        designation_id uuid,
+        id uuid not null,
+        manager_id uuid,
+        phone varchar(20),
+        full_name varchar(120) not null,
+        email varchar(150) not null unique,
+        primary key (id)
+    )
+Hibernate: 
+    create table exit_cases (
+        last_working_day date,
+        notice_period_end date,
+        settlement_amount numeric(12,2) not null,
+        employee_id uuid not null,
+        id uuid not null,
+        status varchar(30) not null,
+        exit_type varchar(100) not null,
+        reason varchar(2000),
+        primary key (id)
+    )
+Hibernate: 
+    create table feature_package_features (
+        created_at timestamp(6) not null,
+        id uuid not null,
+        package_id uuid not null,
+        feature_key varchar(120) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table feature_packages (
+        price_cents integer not null,
+        created_at timestamp(6) not null,
+        id uuid not null,
+        name varchar(120) not null,
+        description varchar(4000),
+        primary key (id)
+    )
+Hibernate: 
+    create table feedback (
+        created_at timestamp(6) not null,
+        employee_id uuid not null,
+        id uuid not null,
+        reviewer_id uuid,
+        feedback_type varchar(50) not null,
+        content varchar(2000) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table form_templates (
+        is_active boolean not null,
+        created_at timestamp(6) not null,
+        id uuid not null,
+        name varchar(120) not null,
+        description varchar(1000),
+        schema_json varchar(5000) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table gate_passes (
+        created_at timestamp(6) not null,
+        exit_time timestamp(6),
+        expected_return_time timestamp(6),
+        updated_at timestamp(6) not null,
+        approver_id uuid,
+        employee_id uuid not null,
+        id uuid not null,
+        status varchar(30) not null,
+        category varchar(60) not null,
+        admin_comments varchar(1000),
+        reason varchar(1000),
+        primary key (id)
+    )
+Hibernate: 
+    create table goals (
+        achieved_value numeric(10,2),
+        achievement_percentage numeric(5,2) not null,
+        end_date date not null,
+        start_date date not null,
+        target_value numeric(10,2),
+        appraisal_id uuid,
+        employee_id uuid not null,
+        id uuid not null,
+        status varchar(30) not null,
+        title varchar(200) not null,
+        description varchar(1000),
+        primary key (id)
+    )
+Hibernate: 
+    create table helpdesk_tickets (
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        assigned_to uuid,
+        employee_id uuid not null,
+        id uuid not null,
+        priority varchar(30) not null,
+        status varchar(30) not null,
+        category varchar(60) not null,
+        subject varchar(200) not null,
+        description varchar(2000) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table holidays (
+        holiday_date date not null,
+        is_public boolean not null,
+        created_at timestamp(6) not null,
+        id uuid not null,
+        tenant_id uuid,
+        name varchar(120) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table interviews (
+        rating integer,
+        created_at timestamp(6) not null,
+        scheduled_at timestamp(6) not null,
+        application_id uuid not null,
+        id uuid not null,
+        interviewer_id uuid not null,
+        status varchar(30) not null,
+        meeting_link varchar(500),
+        feedback varchar(2000),
+        primary key (id)
+    )
+Hibernate: 
+    create table job_applications (
+        applied_at timestamp(6) not null,
+        candidate_id uuid not null,
+        id uuid not null,
+        job_id uuid not null,
+        status varchar(50) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table job_postings (
+        created_at timestamp(6) not null,
+        department_id uuid,
+        id uuid not null,
+        status varchar(30) not null,
+        employment_type varchar(50),
+        location varchar(100),
+        title varchar(200) not null,
+        description varchar(4000) not null,
+        requirements varchar(4000),
+        primary key (id)
+    )
+Hibernate: 
+    create table kpis (
+        achieved_value numeric(10,2),
+        end_date date not null,
+        start_date date not null,
+        target_value numeric(10,2) not null,
+        weightage numeric(5,2),
+        employee_id uuid not null,
+        goal_id uuid,
+        id uuid not null,
+        status varchar(30) not null,
+        title varchar(200) not null,
+        description varchar(1000),
+        primary key (id)
+    )
+Hibernate: 
+    create table leave_balances (
+        balance_days integer not null,
+        granted_days integer not null,
+        year integer not null,
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        employee_id uuid not null,
+        id uuid not null,
+        leave_type_id uuid not null,
+        primary key (id)
+    )
+2026-09-06T20:27:09.943+05:30  WARN 198911 --- [hrms-spring-backend] [           main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    create table leave_balances (
+        balance_days integer not null,
+        granted_days integer not null,
+        year integer not null,
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        employee_id uuid not null,
+        id uuid not null,
+        leave_type_id uuid not null,
+        primary key (id)
+    )" via JDBC [Syntax error in SQL statement "\000a    create table leave_balances (\000a        balance_days integer not null,\000a        granted_days integer not null,\000a        [*]year integer not null,\000a        created_at timestamp(6) not null,\000a        updated_at timestamp(6) not null,\000a        employee_id uuid not null,\000a        id uuid not null,\000a        leave_type_id uuid not null,\000a        primary key (id)\000a    )"; expected "identifier";]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    create table leave_balances (
+        balance_days integer not null,
+        granted_days integer not null,
+        year integer not null,
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        employee_id uuid not null,
+        id uuid not null,
+        leave_type_id uuid not null,
+        primary key (id)
+    )" via JDBC [Syntax error in SQL statement "\000a    create table leave_balances (\000a        balance_days integer not null,\000a        granted_days integer not null,\000a        [*]year integer not null,\000a        created_at timestamp(6) not null,\000a        updated_at timestamp(6) not null,\000a        employee_id uuid not null,\000a        id uuid not null,\000a        leave_type_id uuid not null,\000a        primary key (id)\000a    )"; expected "identifier";]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createTables(SchemaCreatorImpl.java:428) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createSequencesTablesConstraints(SchemaCreatorImpl.java:344) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:239) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:172) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:142) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:118) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:250) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:322) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.1.13.jar:6.1.13]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.1.13.jar:6.1.13]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:142) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:98) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.2.5.jar:3.2.5]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table leave_balances (\000a        balance_days integer not null,\000a        granted_days integer not null,\000a        [*]year integer not null,\000a        created_at timestamp(6) not null,\000a        updated_at timestamp(6) not null,\000a        employee_id uuid not null,\000a        id uuid not null,\000a        leave_type_id uuid not null,\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table leave_balances (
+        balance_days integer not null,
+        granted_days integer not null,
+        year integer not null,
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        employee_id uuid not null,
+        id uuid not null,
+        leave_type_id uuid not null,
+        primary key (id)
+    ) [42001-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.readIdentifier(Parser.java:5533) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8994) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8939) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.parseCreate(Parser.java:6404) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.parsePrepared(Parser.java:666) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.parse(Parser.java:592) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.parse(Parser.java:564) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.prepareCommand(Parser.java:483) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.2.224.jar:2.2.224]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	... 117 common frames omitted
+
+Hibernate: 
+    create table leave_requests (
+        days_requested integer not null,
+        end_date date not null,
+        start_date date not null,
+        employee_id uuid not null,
+        id uuid not null,
+        leave_type_id uuid not null,
+        status varchar(30) not null,
+        reason varchar(1000),
+        primary key (id)
+    )
+Hibernate: 
+    create table leave_types (
+        default_days_per_year integer not null,
+        is_active boolean not null,
+        created_at timestamp(6) not null,
+        id uuid not null,
+        tenant_id uuid,
+        name varchar(80) not null,
+        description varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table notification_preferences (
+        email_enabled boolean not null,
+        in_app_enabled boolean not null,
+        push_enabled boolean not null,
+        sms_enabled boolean not null,
+        quiet_hours_end varchar(5),
+        quiet_hours_start varchar(5),
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        id uuid not null,
+        user_id uuid not null unique,
+        primary key (id)
+    )
+Hibernate: 
+    create table notification_templates (
+        is_active boolean not null,
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        id uuid not null,
+        channel varchar(50) not null,
+        event_type varchar(100) not null,
+        name varchar(200) not null unique,
+        subject varchar(200),
+        description varchar(500),
+        body varchar(2000) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table notifications (
+        created_at timestamp(6) not null,
+        read_at timestamp(6),
+        sent_at timestamp(6),
+        updated_at timestamp(6) not null,
+        id uuid not null,
+        recipient_id uuid not null,
+        template_id uuid,
+        status varchar(30) not null,
+        channel varchar(50) not null,
+        event_type varchar(100) not null,
+        subject varchar(200),
+        error_message varchar(500),
+        data varchar(2000),
+        message varchar(2000) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table offer_letters (
+        joining_date date,
+        salary_amount numeric(12,2) not null,
+        candidate_id uuid,
+        employee_id uuid not null,
+        id uuid not null,
+        status varchar(30) not null,
+        title varchar(200) not null,
+        notes varchar(2000),
+        primary key (id)
+    )
+Hibernate: 
+    create table onboarding_plans (
+        probation_end_date date,
+        employee_id uuid not null,
+        id uuid not null,
+        owner_id uuid,
+        status varchar(30) not null,
+        checklist varchar(2000) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table overtime_requests (
+        date date not null,
+        hours numeric(5,2) not null,
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        approver_id uuid,
+        attendance_id uuid,
+        employee_id uuid not null,
+        id uuid not null,
+        status varchar(30) not null,
+        reason varchar(1000),
+        primary key (id)
+    )
+Hibernate: 
+    create table payment_webhook_events (
+        processed_at timestamp(6) not null,
+        id uuid not null,
+        status varchar(30) not null,
+        event_type varchar(100) not null,
+        order_id varchar(100),
+        event_id varchar(200) not null unique,
+        primary key (id)
+    )
+Hibernate: 
+    create table payslip_components (
+        amount numeric(12,2) not null,
+        created_at timestamp(6) not null,
+        id uuid not null,
+        payslip_id uuid not null,
+        salary_component_id uuid not null,
+        component_type varchar(50) not null,
+        component_name varchar(120) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table payslips (
+        base_salary numeric(12,2) not null,
+        days_absent integer not null,
+        days_worked integer not null,
+        gross_salary numeric(12,2) not null,
+        month integer not null,
+        net_salary numeric(12,2) not null,
+        total_deductions numeric(12,2) not null,
+        total_tax numeric(12,2) not null,
+        year integer not null,
+        created_at timestamp(6) not null,
+        processed_at timestamp(6),
+        updated_at timestamp(6) not null,
+        employee_id uuid not null,
+        id uuid not null,
+        processed_by uuid,
+        status varchar(30) not null,
+        primary key (id)
+    )
+2026-09-06T20:27:09.963+05:30  WARN 198911 --- [hrms-spring-backend] [           main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    create table payslips (
+        base_salary numeric(12,2) not null,
+        days_absent integer not null,
+        days_worked integer not null,
+        gross_salary numeric(12,2) not null,
+        month integer not null,
+        net_salary numeric(12,2) not null,
+        total_deductions numeric(12,2) not null,
+        total_tax numeric(12,2) not null,
+        year integer not null,
+        created_at timestamp(6) not null,
+        processed_at timestamp(6),
+        updated_at timestamp(6) not null,
+        employee_id uuid not null,
+        id uuid not null,
+        processed_by uuid,
+        status varchar(30) not null,
+        primary key (id)
+    )" via JDBC [Syntax error in SQL statement "\000a    create table payslips (\000a        base_salary numeric(12,2) not null,\000a        days_absent integer not null,\000a        days_worked integer not null,\000a        gross_salary numeric(12,2) not null,\000a        [*]month integer not null,\000a        net_salary numeric(12,2) not null,\000a        total_deductions numeric(12,2) not null,\000a        total_tax numeric(12,2) not null,\000a        year integer not null,\000a        created_at timestamp(6) not null,\000a        processed_at timestamp(6),\000a        updated_at timestamp(6) not null,\000a        employee_id uuid not null,\000a        id uuid not null,\000a        processed_by uuid,\000a        status varchar(30) not null,\000a        primary key (id)\000a    )"; expected "identifier";]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    create table payslips (
+        base_salary numeric(12,2) not null,
+        days_absent integer not null,
+        days_worked integer not null,
+        gross_salary numeric(12,2) not null,
+        month integer not null,
+        net_salary numeric(12,2) not null,
+        total_deductions numeric(12,2) not null,
+        total_tax numeric(12,2) not null,
+        year integer not null,
+        created_at timestamp(6) not null,
+        processed_at timestamp(6),
+        updated_at timestamp(6) not null,
+        employee_id uuid not null,
+        id uuid not null,
+        processed_by uuid,
+        status varchar(30) not null,
+        primary key (id)
+    )" via JDBC [Syntax error in SQL statement "\000a    create table payslips (\000a        base_salary numeric(12,2) not null,\000a        days_absent integer not null,\000a        days_worked integer not null,\000a        gross_salary numeric(12,2) not null,\000a        [*]month integer not null,\000a        net_salary numeric(12,2) not null,\000a        total_deductions numeric(12,2) not null,\000a        total_tax numeric(12,2) not null,\000a        year integer not null,\000a        created_at timestamp(6) not null,\000a        processed_at timestamp(6),\000a        updated_at timestamp(6) not null,\000a        employee_id uuid not null,\000a        id uuid not null,\000a        processed_by uuid,\000a        status varchar(30) not null,\000a        primary key (id)\000a    )"; expected "identifier";]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createTables(SchemaCreatorImpl.java:428) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createSequencesTablesConstraints(SchemaCreatorImpl.java:344) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:239) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:172) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:142) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:118) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:250) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:322) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.1.13.jar:6.1.13]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.1.13.jar:6.1.13]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:142) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:98) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.2.5.jar:3.2.5]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    create table payslips (\000a        base_salary numeric(12,2) not null,\000a        days_absent integer not null,\000a        days_worked integer not null,\000a        gross_salary numeric(12,2) not null,\000a        [*]month integer not null,\000a        net_salary numeric(12,2) not null,\000a        total_deductions numeric(12,2) not null,\000a        total_tax numeric(12,2) not null,\000a        year integer not null,\000a        created_at timestamp(6) not null,\000a        processed_at timestamp(6),\000a        updated_at timestamp(6) not null,\000a        employee_id uuid not null,\000a        id uuid not null,\000a        processed_by uuid,\000a        status varchar(30) not null,\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table payslips (
+        base_salary numeric(12,2) not null,
+        days_absent integer not null,
+        days_worked integer not null,
+        gross_salary numeric(12,2) not null,
+        month integer not null,
+        net_salary numeric(12,2) not null,
+        total_deductions numeric(12,2) not null,
+        total_tax numeric(12,2) not null,
+        year integer not null,
+        created_at timestamp(6) not null,
+        processed_at timestamp(6),
+        updated_at timestamp(6) not null,
+        employee_id uuid not null,
+        id uuid not null,
+        processed_by uuid,
+        status varchar(30) not null,
+        primary key (id)
+    ) [42001-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.readIdentifier(Parser.java:5533) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8994) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8939) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.parseCreate(Parser.java:6404) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.parsePrepared(Parser.java:666) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.parse(Parser.java:592) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.parse(Parser.java:564) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Parser.prepareCommand(Parser.java:483) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.2.224.jar:2.2.224]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	... 117 common frames omitted
+
+Hibernate: 
+    create table performance_appraisals (
+        next_review_date date,
+        rating numeric(3,1),
+        review_date date,
+        employee_id uuid not null,
+        id uuid not null,
+        reviewer_id uuid,
+        status varchar(30) not null,
+        review_period varchar(100) not null,
+        areas_for_improvement varchar(2000),
+        comments varchar(2000),
+        goals_achieved varchar(2000),
+        primary key (id)
+    )
+Hibernate: 
+    create table plan_features (
+        is_included boolean not null,
+        created_at timestamp(6) not null,
+        id uuid not null,
+        plan_id uuid not null,
+        feature_key varchar(120) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table plans (
+        is_active boolean not null,
+        price_cents integer not null,
+        created_at timestamp(6) not null,
+        id uuid not null,
+        billing_period varchar(20) not null,
+        name varchar(120) not null,
+        description varchar(1000),
+        primary key (id)
+    )
+Hibernate: 
+    create table reimbursements (
+        amount numeric(10,2) not null,
+        applied_on timestamp(6) not null,
+        employee_id uuid,
+        id uuid not null,
+        status varchar(30) not null,
+        expense_type varchar(100) not null,
+        receipt_url varchar(500),
+        description varchar(1000),
+        primary key (id)
+    )
+Hibernate: 
+    create table roster_entries (
+        date date not null,
+        is_off_day boolean not null,
+        created_at timestamp(6) not null,
+        employee_id uuid not null,
+        id uuid not null,
+        roster_id uuid not null,
+        shift_id uuid,
+        primary key (id)
+    )
+Hibernate: 
+    create table rosters (
+        end_date date not null,
+        is_published boolean not null,
+        start_date date not null,
+        created_at timestamp(6) not null,
+        id uuid not null,
+        name varchar(120) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table salaries (
+        base_salary numeric(12,2) not null,
+        currency varchar(3) not null,
+        effective_from date not null,
+        effective_to date,
+        is_active boolean not null,
+        employee_id uuid not null,
+        id uuid not null,
+        grade varchar(50),
+        primary key (id)
+    )
+Hibernate: 
+    create table salary_components (
+        is_active boolean not null,
+        id uuid not null,
+        component_type varchar(50) not null,
+        name varchar(120) not null,
+        description varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table salary_history (
+        base_salary numeric(12,2) not null,
+        effective_from date not null,
+        effective_to date,
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        currency varchar(10) not null,
+        employee_id uuid not null,
+        id uuid not null,
+        modified_by uuid not null,
+        salary_id uuid,
+        grade varchar(50),
+        reason_for_change varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table salary_structures (
+        base_salary numeric(10,2) not null,
+        da numeric(10,2) not null,
+        esi_percentage numeric(5,2) not null,
+        hra numeric(10,2) not null,
+        pf_percentage numeric(5,2) not null,
+        special_allowance numeric(10,2) not null,
+        tax_bracket_percentage numeric(5,2) not null,
+        created_at timestamp(6) not null,
+        employee_id uuid,
+        id uuid not null,
+        primary key (id),
+        constraint uk_salary_structure_employee unique (employee_id)
+    )
+Hibernate: 
+    create table shifts (
+        end_time time(6) not null,
+        grace_period_minutes integer not null,
+        is_active boolean not null,
+        start_time time(6) not null,
+        created_at timestamp(6) not null,
+        id uuid not null,
+        tenant_id uuid,
+        name varchar(120) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table subscriptions (
+        ends_at date,
+        price_paid_cents integer,
+        starts_at date not null,
+        id uuid not null,
+        plan_id uuid not null,
+        tenant_id uuid not null,
+        status varchar(30) not null,
+        external_order_id varchar(100) unique,
+        primary key (id)
+    )
+Hibernate: 
+    create table survey_answers (
+        rating_value integer,
+        id uuid not null,
+        question_id uuid not null,
+        response_id uuid not null,
+        answer_text varchar(2000),
+        primary key (id)
+    )
+Hibernate: 
+    create table survey_questions (
+        is_required boolean not null,
+        order_index integer not null,
+        id uuid not null,
+        survey_id uuid not null,
+        question_type varchar(30) not null,
+        question_text varchar(500) not null,
+        options varchar(1000),
+        primary key (id)
+    )
+Hibernate: 
+    create table survey_responses (
+        submitted_at timestamp(6) not null,
+        employee_id uuid not null,
+        id uuid not null,
+        survey_id uuid not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table surveys (
+        created_at timestamp(6) not null,
+        expires_at timestamp(6),
+        created_by uuid not null,
+        id uuid not null,
+        status varchar(30) not null,
+        title varchar(200) not null,
+        description varchar(1000),
+        primary key (id)
+    )
+Hibernate: 
+    create table tenant_features (
+        enabled boolean not null,
+        created_at timestamp(6) not null,
+        id uuid not null,
+        tenant_id uuid not null,
+        feature_key varchar(120) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table tenants (
+        is_active boolean not null,
+        created_at timestamp(6) not null,
+        id uuid not null,
+        name varchar(200) not null,
+        domain varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table timesheets (
+        date date not null,
+        hours_worked numeric(5,2) not null,
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        approver_id uuid,
+        employee_id uuid not null,
+        id uuid not null,
+        project_id uuid,
+        status varchar(30) not null,
+        task_description varchar(1000) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table todo_items (
+        due_date date,
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        employee_id uuid not null,
+        id uuid not null,
+        status varchar(30) not null,
+        description varchar(1000),
+        title varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table training_courses (
+        duration_hours numeric(5,2),
+        id uuid not null,
+        instructor varchar(120),
+        title varchar(200) not null,
+        description varchar(1000),
+        primary key (id)
+    )
+Hibernate: 
+    create table users (
+        is_active boolean not null,
+        created_at timestamp(6) not null,
+        id uuid not null,
+        tenant_id uuid,
+        role varchar(50) not null,
+        full_name varchar(120) not null,
+        email varchar(255) not null unique,
+        password_hash varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table workflow_instances (
+        current_step integer not null,
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        id uuid not null,
+        target_id uuid not null,
+        template_id uuid not null,
+        status varchar(30) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table workflow_templates (
+        is_active boolean not null,
+        created_at timestamp(6) not null,
+        id uuid not null,
+        name varchar(120) not null,
+        trigger_event varchar(120) not null,
+        steps_json varchar(5000) not null,
+        primary key (id)
+    )
+2026-09-06T20:27:09.994+05:30  INFO 198911 --- [hrms-spring-backend] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-06T20:27:10.788+05:30  INFO 198911 --- [hrms-spring-backend] [           main] c.hrms.employee.EmployeeDataAccessTest   : Started EmployeeDataAccessTest in 3.888 seconds (process running for 4.832)
+]]></system-out>
+    <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/home/darshan-kshetri/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
+</testsuite>
